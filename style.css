@@ -126,4 +126,45 @@ table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid black; padding: 2px; text-align: left; }
 
 
+@media (max-width: 600px) {
+  
+  body {
+    grid-template-areas:
+      "header"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six";
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    font-size: 14px; 
+    min-height: 100%;
+  }
 
+  .two {
+    grid-row: auto;
+  }
+
+  .six {
+    grid-column: auto;
+    min-height: auto; 
+  }
+
+  .x, .six .y {
+    font-size: 16px;
+    position: static;
+    float: none;
+    margin-bottom: 5px;
+  }
+  
+  .six p {
+    padding-top: 5px !important; 
+    padding-left: 5px !important;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+}
